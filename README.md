@@ -67,7 +67,7 @@ The ami id is used to create an identical machine instance for the project.
 
 A security group is created for the template having port 80 for inbound and all traffic for outbound
 
-And I created a launch script in the user data section
+And I created a launch script in the user data section which is also in user_data.sh
 
 ```
     #!/bin/bash
@@ -108,9 +108,15 @@ While creating an ASG I created an ALB and its target group also.
 
 Port 80 is opened on the target group.
 
+Target groups are where the ALB will be routing traffic to.
+
 ![App-lb](images/alb.png)
 
 ![App-lb-tg](images/lb-tg.png)
+
+## End Game of The Project
+
+![endgame](images/endgame.png)
 
 ### Special Recognition
 - Patrick Aziken (Php template file)
