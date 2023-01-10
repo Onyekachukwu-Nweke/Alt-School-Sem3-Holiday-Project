@@ -9,13 +9,17 @@ _From the Diagram above requirements needed for the project_:
 - Three (3) Route Tables
 - One (1) Internet Gateway
 - Two Nat Gateway
-- One (1) Application Balancer
 - Launch Template for AutoScaling Group
 - AutoScaling Group (ASG)
+- One (1) Application Balancer
 
 ## Creation of A Virtual Private Cloud (VPC)
 
-VPC is used to isolate cloud resources
+![vpc](/images/vpc.png)
+
+VPC is used to isolate cloud resources in a public cloud by creating a private cloud.
+
+![vpc](/images/vpc2.png)
 
 ## Creation of Four (4) Subnets 
 
@@ -33,6 +37,22 @@ The main route table is the default route table and the Internet gateway will be
 
 While the other private route tables will be routed to the NAT gateway to allow the private instances internet access
 
+## Creation of One (1) Internet Gateway
+
+![igw](/images/igw.png)
+
+Internet gateways are created for VPCs to connect to the internet through routing tables.
+
+## Creation of Two Nat Gateway
+
+![nat-igw](/images/nat.png)
+
+NAT gateways are used to provide resources especially instances in private subnets with internet access and are connected to those subnets through routing tables.
+
+Elastic IPs are assigned to nat gateways
+
+![elastic-ip](/images/eip.png)
+
 ## Creation of Launch Template for AutoScaling Group
 
 ![launch template](/images/launch-temp.png)
@@ -47,7 +67,7 @@ The ami id is used to create an identical machine instance for the project.
 
 A security group is created for the template having port 80 for inbound and all traffic for outbound
 
-And I created a launch script called user data
+And I created a launch script in the user data section
 
 ```
     #!/bin/bash
@@ -66,4 +86,31 @@ And I created a launch script called user data
     sudo systemctl restart nginx
 ```
 
-## Creation of 
+The nginx file is for the configuration of nginx for target machine
+
+## Creation of AutoScaling Group (ASG)
+
+![autoscale](/images/asg.png)
+
+An Auto Scaling group contains a collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. The ASG is used to avoid infrastructural failure.
+
+In ASG you fill the amount of instances you want at every given time.
+
+You can also fill in the subnets and avaialability zones where the instances will be created.
+
+![net-instances](/images/asg-net.png)
+
+## Creation of Application Load Balancer (ALB)
+
+Application Load Balancer is used to evenly distribute network traffic from http and https requests. It sits at the very front of the vpc.
+
+While creating an ASG I created an ALB and its target group also.
+
+Port 80 is opened on the target group.
+
+![App-lb](images/alb.png)
+
+![App-lb-tg](images/lb-tg.png)
+
+### Special Recognition
+- Patrick Aziken (Php template file)
