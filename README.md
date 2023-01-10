@@ -1,4 +1,4 @@
-![project-logo](/Alt-School-Sem3-Holiday-Project/images/AltSchool-Holiday-Sem3.jpeg)
+![project-logo](/images/AltSchool-Holiday-Sem3.jpeg)
 
 # Deployment of a High Availability Website on Different Zones in the same Region(us-east-1)
 
