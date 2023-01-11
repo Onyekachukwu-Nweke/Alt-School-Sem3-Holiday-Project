@@ -130,7 +130,7 @@ Target groups are where the ALB will be routing traffic to.
 
 ## Routing of Domain name
 
-I created a hosted zone and a record for http://onyekachukwuejiofornweke.me
+I created a hosted zone and a record using AWS service Route 53 for http://onyekachukwuejiofornweke.me
 
 ![route53](images/r53.png)
 
