@@ -121,9 +121,18 @@ Port 80 is opened on the target group.
 
 Target groups are where the ALB will be routing traffic to.
 
+![App-lb](images/alb-screen.png)
+![App-lb](images/alb-tg.png)
 ![App-lb](images/alb.png)
+![App-lb](images/lb-attach.png)
+![App-lb](images/tg-proper.png)
+![App-lb](images/lb-tg.png)
 
-![endgame](images/endgame.png)
+## Routing of Domain name
+
+I created a hosted zone and a record for http://onyekachukwuejiofornweke.me
+
+![route53](images/r53.png)
 
 ## End Game of The Project
 
