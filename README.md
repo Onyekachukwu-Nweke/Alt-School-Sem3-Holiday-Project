@@ -2,6 +2,8 @@
 
 # Deployment of a High Availability Website on Different Zones in the same Region(us-east-1)
 
+Project Website: http://onyekachukwuejiofornweke.me
+
 _From the Diagram above requirements needed for the project_:
 
 - VPC
@@ -100,6 +102,15 @@ You can also fill in the subnets and avaialability zones where the instances wil
 
 ![net-instances](/images/asg-net.png)
 
+
+## View of the instances created by the ASG
+
+According to the project requirement I ensured that the private instances did not have a public ip address.
+
+![instance-1](/images/instance-1.png)
+
+![instance-2](/images/instance-2.png)
+
 ## Creation of Application Load Balancer (ALB)
 
 Application Load Balancer is used to evenly distribute network traffic from http and https requests. It sits at the very front of the vpc.
@@ -110,9 +121,21 @@ Port 80 is opened on the target group.
 
 Target groups are where the ALB will be routing traffic to.
 
-![App-lb](images/alb.png)
+![App-lb](images/alb-screen.png)
 
-![App-lb-tg](images/lb-tg.png)
+![App-lb-tg](images/alb-tg.png)
+
+![App-lb-attach](images/lb-attach.png)
+
+![App-lb-attach](images/tg-proper.png)
+
+![App-lb-attach](images/lb-tg.png)
+
+## Routing Traffic Using Route 53
+
+I created a hosted zone, created a record also and routed traffic to http://onyekachukwuejiofornweke.me (which is the record)
+
+![routing](/images/r53.png)
 
 ## End Game of The Project
 
