@@ -4,6 +4,8 @@
 
 Project Website: http://onyekachukwuejiofornweke.me
 
+<b>Please NAT gateway was recently deleted due to cost reasons.<b>
+
 _From the Diagram above requirements needed for the project_:
 
 - VPC
