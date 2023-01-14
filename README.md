@@ -4,7 +4,7 @@
 
 Project Website: http://onyekachukwuejiofornweke.me
 
-<b>Please NAT gateway was recently deleted due to cost reasons.<b>
+<b>Please NAT gateway was recently deleted and Elastic IP released due to cost reasons.<b>
 
 _From the Diagram above requirements needed for the project_:
 
